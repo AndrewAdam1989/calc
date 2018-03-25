@@ -27,11 +27,3 @@ done
 if [ "$SS_CONFIG" != "" ]; then
     $SS_MODULE $SS_CONFIG 2>&1 &
 fi
-
-if [ "$OBFS_CONFIG" != "" ]; then
-    $OBFS_MODULE $OBFS_CONFIG 2>&1 &
-fi
-
-if [ "$KCP_CONFIG" != "" ]; then
-    $KCP_MODULE $KCP_CONFIG 2>&1 &
-fi
