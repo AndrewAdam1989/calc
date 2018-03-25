@@ -7,23 +7,17 @@ OBFS_MODULE=${OBFS_MODULE:-"obfs-server"}
 KCP_CONFIG=${KCP_CONFIG:-""}
 KCP_MODULE=${KCP_MODULE:-"kcpserver"}
 
-while getopts "s:S:o:O:k:K" OPT; do
+while getopts "s:o:k" OPT; do
     case $OPT in
         s)
             SS_CONFIG=$OPTARG;;
-        S)
-            SS_MODULE=$OPTARG;;
         o)
             OBFS_CONFIG=$OPTARG;;
-        O)
-            OBFS_MODULE=$OPTARG;;
         k)
             KCP_CONFIG=$OPTARG;;
-        K)
-            KCP_MODULE=$OPTARG;;
     esac
 done
 
 if [ "$SS_CONFIG" != "" ]; then
-    $SS_MODULE $SS_CONFIG 2>&1 &
+    $SS_MODULE $SS_CONFIG
 fi
