@@ -25,22 +25,13 @@ while getopts "s:S:o:O:k:K" OPT; do
 done
 
 if [ "$OBFS_CONFIG" != "" ]; then
-	echo -e "\033[32mStarting simple-obfs......\033[0m"
 	$OBFS_MODULE $OBFS_CONFIG 2>&1 &
-else
-	echo -e "\033[33mSimple-obfs not started......\033[0m"
 fi
 
 if [ "$KCP_CONFIG" != "" ]; then
-	echo -e "\033[32mStarting kcptun......\033[0m"
 	$KCP_MODULE $KCP_CONFIG 2>&1 &
-else
-	echo -e "\033[33mKcptun not started......\033[0m"
 fi
 
 if [ "$SS_CONFIG" != "" ]; then
-	echo -e "\033[32mStarting shadowsocks......\033[0m"
 	$SS_MODULE $SS_CONFIG
-else
-	echo -e "\033[33mShadowsocks not started......\033[0m"
 fi
