@@ -1,8 +1,8 @@
 FROM alpine:3.7
 
 ENV TZ $TZ
-ENV SS_LIBEV_VERSION 3.2.3
-ENV KCP_VERSION 20181230
+ENV SS_LIBEV_VERSION 3.3.4
+ENV KCP_VERSION 20200201
 ENV SS_DOWNLOAD_URL https://github.com/shadowsocks/shadowsocks-libev/releases/download/v${SS_LIBEV_VERSION}/shadowsocks-libev-${SS_LIBEV_VERSION}.tar.gz
 ENV OBFS_DOWNLOAD_URL https://github.com/shadowsocks/simple-obfs.git
 ENV KCP_DOWNLOAD_URL https://github.com/xtaci/kcptun/releases/download/v${KCP_VERSION}/kcptun-linux-amd64-${KCP_VERSION}.tar.gz
