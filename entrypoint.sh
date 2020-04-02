@@ -33,7 +33,7 @@ fi
 
 if [ "$KCP_CFG" != "" ]; then
 	echo -e "\033[32mStarting kcptun......\033[0m"
-	$KCP_CMD $KCP_CFG 2>&1 &
+	$KCP_CMD $KCP_CFG
 else
 	echo -e "\033[33mKcptun not started......\033[0m"
 fi
